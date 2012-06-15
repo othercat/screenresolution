@@ -6,6 +6,8 @@ on Mac OS 10.6, and possibly above.
 
 ## Change from fork
 
+New Function that it can get the LCD refresh rate correctly
+
 New markdown README
 
 Move the command line makefile to Xcode compile environment (Xcode 4.2 tested).
@@ -17,6 +19,8 @@ default return should be the resolution raw value.
 ## Requirement
 
 Mac OS X 10.6 and above version (10.8 not tested)
+
+File parse-edit.c from my ThirdPartTools/EDID or you can fetch somewhere.
 
 ## Build+Install
 

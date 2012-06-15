@@ -1,5 +1,5 @@
 
-#define VERSION "1.7"
+#define VERSION "1.8"
 // vim: ts=4:sw=4
 /*
  * screenresolution sets the screen resolution on Mac computers.
@@ -22,10 +22,13 @@
  */
 
 #import <ApplicationServices/ApplicationServices.h>
+#import <QuartzCore/CVDisplayLink.h>
+#import <IOKit/graphics/IOGraphicsLib.h>
+
 
 // Number of modes to list per line.
 #define MODES_PER_LINE 3
-
+#define IS_SILENT YES
 // I have written an alternate list routine that spits out WAY more info
 // #define LIST_DEBUG 1
 
@@ -35,6 +38,7 @@ struct config {
     size_t d; // colour depth
     double r; // refresh rate
 };
+typedef unsigned char byte;
 
 unsigned int setDisplayToMode(CGDirectDisplayID display, CGDisplayModeRef mode);
 unsigned int configureDisplay(CGDirectDisplayID display,
@@ -43,7 +47,13 @@ unsigned int configureDisplay(CGDirectDisplayID display,
 unsigned int listCurrentMode(CGDirectDisplayID display, int displayNum);
 unsigned int listAvailableModes(CGDirectDisplayID display, int displayNum);
 unsigned int parseStringConfig(const char *string, struct config *out);
+double CGDisplayGetRefreshRate(CGDisplayModeRef mode, CGDirectDisplayID displayID, BOOL isSilent);
 size_t bitDepth(CGDisplayModeRef mode);
+
+
+extern int parse_edid( byte* edid,int isSilent);
+extern float vfreq;
+
 
 // http://stackoverflow.com/questions/3060121/core-foundation-equivalent-for-NSLog/3062319#3062319
 //void NSLog(CFStringRef format, ...);
@@ -241,6 +251,48 @@ unsigned int setDisplayToMode(CGDirectDisplayID display, CGDisplayModeRef mode) 
     return 1;
 }
 
+
+double CGDisplayGetRefreshRate(CGDisplayModeRef mode, CGDirectDisplayID displayID, BOOL isSilent)
+{
+    
+    float refreshHz = CGDisplayModeGetRefreshRate(mode);
+    
+    if (refreshHz < 1e-6) {
+        
+        if (!isSilent)
+            printf("LCD monitor should use EDID to get its refresh rate.\n");
+        unsigned char i, EDID[128];
+        CFRange allrange = {0, 128};
+        CFDictionaryRef displayDict = nil;
+        CFDataRef EDIDValue = nil;
+        
+        // Now ask IOKit about the EDID reported in the display device (low level)
+        io_connect_t displayPort = CGDisplayIOServicePort(displayID);
+        if (displayPort) displayDict = (CFDictionaryRef)IOCreateDisplayInfoDictionary(displayPort, 0);       
+        if (displayDict) EDIDValue = CFDictionaryGetValue(displayDict, CFSTR(kIODisplayEDIDKey));
+        if (EDIDValue) {	/* this will fail on i.e. televisions connected to powerbook s-video output */ 
+            CFDataGetBytes(EDIDValue, allrange, EDID);
+            if (!isSilent) {
+                printf("IOKit reports the following EDID for your main display:\n\n");
+                for (i = 0; i < 128; i++){
+                    printf("%02X ", EDID[i]);
+                    if ((i+1)%16 == 0) printf("\n");
+                }
+                printf("\n");
+            }
+                parse_edid(EDID,isSilent);
+            
+            if (!isSilent) 
+                printf("\nIf there is a valid reported 'vfreq' in the EDID,\nand CoreGraphics reported 0.000000,\nthen RADAR #3162841 is still valid.\n");
+                refreshHz = vfreq;
+        }
+        else if (!isSilent) 
+            printf("IOKit had a problem reading your main display EDID.\nAs long as CoreGraphics did not report 0.000000, this is OK.\n");
+    }
+	
+    return refreshHz;
+} // prepareCVDisplayLink
+
 unsigned int listCurrentMode(CGDirectDisplayID display, int displayNum) {
     unsigned int returncode = 1;
     CGDisplayModeRef currentMode = CGDisplayCopyDisplayMode(display);
@@ -248,12 +300,15 @@ unsigned int listCurrentMode(CGDirectDisplayID display, int displayNum) {
         printf("Error: unable to copy current display mode\n");
         return 0;
     }
-    printf("Display %d: %lux%lux%lu@%.0f\n",
+    
+    printf("Display %d: %lux%lux%lu@%.2fHz\n",
           displayNum,
           CGDisplayModeGetWidth(currentMode),
           CGDisplayModeGetHeight(currentMode),
           bitDepth(currentMode),
-          CGDisplayModeGetRefreshRate(currentMode));
+          //CGDisplayModeGetRefreshRate(currentMode)
+           CGDisplayGetRefreshRate(currentMode,display,IS_SILENT)
+           );
     CGDisplayModeRelease(currentMode);
     return returncode;
 }
@@ -281,11 +336,13 @@ unsigned int listAvailableModes(CGDirectDisplayID display, int displayNum) {
             printf("\t");
         }
         char modestr [50];
-        sprintf(modestr, "%lux%lux%lu@%.0f",
+        sprintf(modestr, "%lux%lux%lu@%.2f",
                 CGDisplayModeGetWidth(mode),
                 CGDisplayModeGetHeight(mode),
                 bitDepth(mode),
-                CGDisplayModeGetRefreshRate(mode));
+                //CGDisplayModeGetRefreshRate(mode)
+                CGDisplayGetRefreshRate(mode,display,IS_SILENT)
+                );
         printf("%-20s ", modestr);
         if (i % MODES_PER_LINE == MODES_PER_LINE - 1) {
             printf("\n");
