@@ -2,16 +2,16 @@
 
 This is a tool that can be used to determine current resolution,
 list available resolutions and set resolutions for active displays
-on Mac OS 10.6, and possibly above.  I have only tested 10.6.
+on Mac OS 10.6, and possibly above.
 
 ## requirement
 
-* Mac OS X 10.6 and above version (10.8 not tested)
+Mac OS X 10.6 and above version (10.8 not tested)
 
 ## Build+Install
 
 Just fetch the code via git clone github.com:othercat/screenresolution
-Then compile it with Xcode 4
+Then compile it with Xcode 4.
 
 ## Running
 
@@ -68,7 +68,10 @@ http://developer.apple.com/library/mac/documentation/GraphicsImaging/Reference/Q
 
 ## Changelog
 
-* New markdown README
-* Move the command line makefile to Xcode compile environment (Xcode 4.2 tested)
-* Compile with clang successfully
-* default return should be the resolution raw value.
+New markdown README
+
+Move the command line makefile to Xcode compile environment (Xcode 4.2 tested).
+
+Compile with clang successfully.
+
+default return should be the resolution raw value.
