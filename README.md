@@ -37,8 +37,8 @@ and set.  All three modes operate on active displays [1].
 The get mode will show you the resolution of all active displays
 
     $ screenresolution get
-    Display 0: 1920x1200x32
-    Display 1: 1920x1200x32
+    Display 0: 1920x1200x32Hz
+    Display 1: 1920x1200x32Hz
  
  The list mode will show you to the available resolutions of all
  active displays, seperated by various whitespace.
@@ -61,21 +61,21 @@ resolutions will be ignored.
 
 Example 1:
     This example works with one or more screens
-    $ screenresolution 800x600x32
+    $ screenresolution set 800x600x32
 Result 1:
     The main display will change to 800x600x32, second screen
     will not be changed
 
 Example 2:
     This example assumes two screens
-    $ screenresolution 800x600x32 800x600x32
+    $ screenresolution set 800x600x32 800x600x32
 Result 2:
     The first and second monitor on the system will be set to 
     800x600x32
 
 Example 3:
     This example assumes two screens
-    $ screen resolution skip 800x600x32
+    $ screen resolution set skip 800x600x32
     This will not touch the first screen but will set the second
     screen to 800x600x32
 
