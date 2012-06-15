@@ -7,6 +7,7 @@ on Mac OS 10.6, and possibly above.  I have only tested 10.6.
 ## requirement
 
 * Mac OS X 10.6 and above version (10.8 not tested)
+* ZNLog from MyUtilities or somewhere
 
 ## Build+Install
 
