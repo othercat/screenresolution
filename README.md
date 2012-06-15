@@ -1,10 +1,20 @@
-# screenresolution
+# Project screenresolution
 
 This is a tool that can be used to determine current resolution,
 list available resolutions and set resolutions for active displays
 on Mac OS 10.6, and possibly above.
 
-## requirement
+## Change from fork
+
+New markdown README
+
+Move the command line makefile to Xcode compile environment (Xcode 4.2 tested).
+
+Compile with clang successfully.
+
+default return should be the resolution raw value.
+
+## Requirement
 
 Mac OS X 10.6 and above version (10.8 not tested)
 
@@ -68,12 +78,15 @@ Example 3:
 [1]See discussion point for explanation of what active display means.
 http://developer.apple.com/library/mac/documentation/GraphicsImaging/Reference/Quartz_Services_Ref/Reference/reference.html#//apple_ref/c/func/CGGetActiveDisplayList
 
-## Changelog
 
-New markdown README
 
-Move the command line makefile to Xcode compile environment (Xcode 4.2 tested).
 
-Compile with clang successfully.
+## About
 
-default return should be the resolution raw value.
+twitter: [@othercatlee](twitter.com/#!/othercatlee)
+
+## Licence
+
+   screenresolution uses GPLv2 License. 
+   Copyright (c) 2012, Richard Li
+   All rights reserved.
