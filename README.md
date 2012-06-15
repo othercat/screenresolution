@@ -13,6 +13,8 @@ Mac OS X 10.6 and above version (10.8 not tested)
 Just fetch the code via git clone github.com:othercat/screenresolution
 Then compile it with Xcode 4.
 
+I've also put the binary file that compiled from my Macbook Pro if someone doesnot want to compile the source
+
 ## Running
 
 There are three commands that this program supports: get, list 

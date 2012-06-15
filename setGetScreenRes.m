@@ -52,23 +52,20 @@ size_t bitDepth(CGDisplayModeRef mode);
 int main(int argc, const char *argv[]) {
     // http://developer.apple.com/library/IOs/#documentation/CoreFoundation/Conceptual/CFStrings/Articles/MutableStrings.html
     unsigned int exitcode = 0;
-    CFMutableStringRef args = CFStringCreateMutable(NULL, 0);
-    CFStringEncoding encoding = CFStringGetSystemEncoding();
-    CFStringAppend(args, CFSTR("    starting screenresolution argv="));
+    
     if (argc > 1) {
+        CFMutableStringRef args = CFStringCreateMutable(NULL, 0);
+        CFStringEncoding encoding = CFStringGetSystemEncoding();
+
+        CFStringAppend(args, CFSTR("    starting screenresolution argv="));
         for (int i = 1 ; i < argc ; i++) {
             CFStringAppendCString(args, argv[i], encoding);
             // If I were so motivated, I'd probably use CFStringAppendFormat
             CFStringAppend(args, CFSTR(" "));
         }
-    }
-    else
-        CFStringAppendCString(args, "null", encoding);
+        DLog(@"%@", args);
+        CFRelease(args);
 
-    DLog(@"%@", args);
-    CFRelease(args);
-    
-    if (argc > 1) {
         //int keepgoing = 1;
         CGError rc;
         uint32_t displayCount = 0;
