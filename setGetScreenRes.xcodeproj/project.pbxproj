@@ -10,7 +10,6 @@
 		8DD76F9A0486AA7600D96B5E /* setGetScreenRes.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* setGetScreenRes.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9F0486AA7600D96B5E /* setGetScreenRes.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859EA3029092ED04C91782 /* setGetScreenRes.1 */; };
 		EF12EC7B158AC37F009FF37D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF12EC7A158AC37F009FF37D /* Cocoa.framework */; };
-		EF12EC92158AD502009FF37D /* ZNLog.m in Sources */ = {isa = PBXBuildFile; fileRef = EF12EC91158AD502009FF37D /* ZNLog.m */; };
 		EF1EA48C122C8EDE00117E14 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1EA48B122C8EDE00117E14 /* ApplicationServices.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,8 +33,7 @@
 		C6859EA3029092ED04C91782 /* setGetScreenRes.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = setGetScreenRes.1; sourceTree = "<group>"; };
 		EF12EC7A158AC37F009FF37D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		EF12EC84158AD4C3009FF37D /* gpl-2.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gpl-2.0.txt"; sourceTree = "<group>"; };
-		EF12EC90158AD502009FF37D /* ZNLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZNLog.h; path = ../../MyUtilities/ZNLog.h; sourceTree = "<group>"; };
-		EF12EC91158AD502009FF37D /* ZNLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZNLog.m; path = ../../MyUtilities/ZNLog.m; sourceTree = "<group>"; };
+		EF12EC94158AD83F009FF37D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		EF1EA48B122C8EDE00117E14 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -66,8 +64,7 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				EF12EC90158AD502009FF37D /* ZNLog.h */,
-				EF12EC91158AD502009FF37D /* ZNLog.m */,
+				EF12EC94158AD83F009FF37D /* README.md */,
 				EF12EC84158AD4C3009FF37D /* gpl-2.0.txt */,
 				32A70AAB03705E1F00C91783 /* setGetScreenRes_Prefix.pch */,
 				08FB7796FE84155DC02AAC07 /* setGetScreenRes.m */,
@@ -154,7 +151,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD76F9A0486AA7600D96B5E /* setGetScreenRes.m in Sources */,
-				EF12EC92158AD502009FF37D /* ZNLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
