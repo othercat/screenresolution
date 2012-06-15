@@ -13,10 +13,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8DD76F960486AA7600D96B5E"
-               BuildableName = "setGetScreenRes"
-               BlueprintName = "setGetScreenRes"
-               ReferencedContainer = "container:setGetScreenRes.xcodeproj">
+               BlueprintIdentifier = "EFE226D2158B015A007CA4FD"
+               BuildableName = "screenresolution"
+               BlueprintName = "screenresolution"
+               ReferencedContainer = "container:screenresolution.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,10 +31,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8DD76F960486AA7600D96B5E"
-            BuildableName = "setGetScreenRes"
-            BlueprintName = "setGetScreenRes"
-            ReferencedContainer = "container:setGetScreenRes.xcodeproj">
+            BlueprintIdentifier = "EFE226D2158B015A007CA4FD"
+            BuildableName = "screenresolution"
+            BlueprintName = "screenresolution"
+            ReferencedContainer = "container:screenresolution.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -43,24 +43,18 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8DD76F960486AA7600D96B5E"
-            BuildableName = "setGetScreenRes"
-            BlueprintName = "setGetScreenRes"
-            ReferencedContainer = "container:setGetScreenRes.xcodeproj">
+            BlueprintIdentifier = "EFE226D2158B015A007CA4FD"
+            BuildableName = "screenresolution"
+            BlueprintName = "screenresolution"
+            ReferencedContainer = "container:screenresolution.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "-l"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -73,10 +67,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8DD76F960486AA7600D96B5E"
-            BuildableName = "setGetScreenRes"
-            BlueprintName = "setGetScreenRes"
-            ReferencedContainer = "container:setGetScreenRes.xcodeproj">
+            BlueprintIdentifier = "EFE226D2158B015A007CA4FD"
+            BuildableName = "screenresolution"
+            BlueprintName = "screenresolution"
+            ReferencedContainer = "container:screenresolution.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

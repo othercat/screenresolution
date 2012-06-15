@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>setGetScreenRes.xcscheme</key>
+		<key>screenresolution.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>8DD76F960486AA7600D96B5E</key>
+		<key>EFE226D2158B015A007CA4FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

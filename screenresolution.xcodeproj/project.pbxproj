@@ -1,0 +1,243 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFE226D8158B015A007CA4FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE226D7158B015A007CA4FD /* Foundation.framework */; };
+		EFE226DB158B015A007CA4FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE226DA158B015A007CA4FD /* main.m */; };
+		EFE226DF158B015A007CA4FD /* screenresolution.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFE226DE158B015A007CA4FD /* screenresolution.1 */; };
+		EFE226EC158B01FC007CA4FD /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE226EB158B01FC007CA4FD /* ApplicationServices.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EFE226D1158B015A007CA4FD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				EFE226DF158B015A007CA4FD /* screenresolution.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EFE226D3158B015A007CA4FD /* screenresolution */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = screenresolution; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFE226D7158B015A007CA4FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EFE226DA158B015A007CA4FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EFE226DE158B015A007CA4FD /* screenresolution.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = screenresolution.1; sourceTree = "<group>"; };
+		EFE226EA158B01ED007CA4FD /* screenresolution-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "screenresolution-Prefix.pch"; sourceTree = "<group>"; };
+		EFE226EB158B01FC007CA4FD /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFE226D0158B015A007CA4FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFE226EC158B01FC007CA4FD /* ApplicationServices.framework in Frameworks */,
+				EFE226D8158B015A007CA4FD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFE226C8158B015A007CA4FD = {
+			isa = PBXGroup;
+			children = (
+				EFE226D9158B015A007CA4FD /* screenresolution */,
+				EFE226D6158B015A007CA4FD /* Frameworks */,
+				EFE226D4158B015A007CA4FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFE226D4158B015A007CA4FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFE226D3158B015A007CA4FD /* screenresolution */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFE226D6158B015A007CA4FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFE226EB158B01FC007CA4FD /* ApplicationServices.framework */,
+				EFE226D7158B015A007CA4FD /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFE226D9158B015A007CA4FD /* screenresolution */ = {
+			isa = PBXGroup;
+			children = (
+				EFE226DA158B015A007CA4FD /* main.m */,
+				EFE226DE158B015A007CA4FD /* screenresolution.1 */,
+				EFE226DC158B015A007CA4FD /* Supporting Files */,
+			);
+			path = screenresolution;
+			sourceTree = "<group>";
+		};
+		EFE226DC158B015A007CA4FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFE226EA158B01ED007CA4FD /* screenresolution-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFE226D2158B015A007CA4FD /* screenresolution */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFE226E2158B015A007CA4FD /* Build configuration list for PBXNativeTarget "screenresolution" */;
+			buildPhases = (
+				EFE226CF158B015A007CA4FD /* Sources */,
+				EFE226D0158B015A007CA4FD /* Frameworks */,
+				EFE226D1158B015A007CA4FD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = screenresolution;
+			productName = screenresolution;
+			productReference = EFE226D3158B015A007CA4FD /* screenresolution */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFE226CA158B015A007CA4FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = EFE226CD158B015A007CA4FD /* Build configuration list for PBXProject "screenresolution" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EFE226C8158B015A007CA4FD;
+			productRefGroup = EFE226D4158B015A007CA4FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFE226D2158B015A007CA4FD /* screenresolution */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFE226CF158B015A007CA4FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFE226DB158B015A007CA4FD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EFE226E0158B015A007CA4FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = "";
+			};
+			name = Debug;
+		};
+		EFE226E1158B015A007CA4FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = "";
+			};
+			name = Release;
+		};
+		EFE226E3158B015A007CA4FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "screenresolution/screenresolution-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
+			};
+			name = Debug;
+		};
+		EFE226E4158B015A007CA4FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "screenresolution/screenresolution-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFE226CD158B015A007CA4FD /* Build configuration list for PBXProject "screenresolution" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFE226E0158B015A007CA4FD /* Debug */,
+				EFE226E1158B015A007CA4FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFE226E2158B015A007CA4FD /* Build configuration list for PBXNativeTarget "screenresolution" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFE226E3158B015A007CA4FD /* Debug */,
+				EFE226E4158B015A007CA4FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFE226CA158B015A007CA4FD /* Project object */;
+}
