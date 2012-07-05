@@ -413,7 +413,7 @@ double CGDisplayGetRefreshRate(CGDisplayModeRef mode, CGDirectDisplayID displayI
         if (!isSilent)
             printf("LCD monitor should use EDID to get its refresh rate.\n");
         unsigned char i, EDID[128];
-        CFRange allrange = {0, 128};
+        CFRange allrange = CFRangeMake(0, 128);// {0, 128};
         CFDictionaryRef displayDict = nil;
         CFDataRef EDIDValue = nil;
         

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF428E0215A59F3B0048760C /* parse-edid.c in Sources */ = {isa = PBXBuildFile; fileRef = EF428E0115A59F3B0048760C /* parse-edid.c */; };
 		EFE226D8158B015A007CA4FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE226D7158B015A007CA4FD /* Foundation.framework */; };
 		EFE226DB158B015A007CA4FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE226DA158B015A007CA4FD /* main.m */; };
 		EFE226DF158B015A007CA4FD /* screenresolution.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFE226DE158B015A007CA4FD /* screenresolution.1 */; };
 		EFE226EC158B01FC007CA4FD /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE226EB158B01FC007CA4FD /* ApplicationServices.framework */; };
 		EFEE1412158B205F006528BD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEE1411158B205F006528BD /* IOKit.framework */; };
-		EFEE1415158B20F0006528BD /* parse-edid.c in Sources */ = {isa = PBXBuildFile; fileRef = EFEE1414158B20F0006528BD /* parse-edid.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +29,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EF428E0115A59F3B0048760C /* parse-edid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "parse-edid.c"; path = "../../../ThirdPartTools/CocoaClasses/EDID/parse-edid.c"; sourceTree = "<group>"; };
+		EF428E0415A59F850048760C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
+		EF428E0515A59F8D0048760C /* gpl-2.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gpl-2.0.txt"; sourceTree = SOURCE_ROOT; };
 		EFE226D3158B015A007CA4FD /* screenresolution */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = screenresolution; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE226D7158B015A007CA4FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EFE226DA158B015A007CA4FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -36,7 +39,6 @@
 		EFE226EA158B01ED007CA4FD /* screenresolution-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "screenresolution-Prefix.pch"; sourceTree = "<group>"; };
 		EFE226EB158B01FC007CA4FD /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
 		EFEE1411158B205F006528BD /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
-		EFEE1414158B20F0006528BD /* parse-edid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "parse-edid.c"; path = "../../../ThirdPartTools/EDID/parse-edid.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +85,9 @@
 		EFE226D9158B015A007CA4FD /* screenresolution */ = {
 			isa = PBXGroup;
 			children = (
-				EFEE1414158B20F0006528BD /* parse-edid.c */,
+				EF428E0515A59F8D0048760C /* gpl-2.0.txt */,
+				EF428E0415A59F850048760C /* README.md */,
+				EF428E0115A59F3B0048760C /* parse-edid.c */,
 				EFE226DA158B015A007CA4FD /* main.m */,
 				EFE226DE158B015A007CA4FD /* screenresolution.1 */,
 				EFE226DC158B015A007CA4FD /* Supporting Files */,
@@ -150,7 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFE226DB158B015A007CA4FD /* main.m in Sources */,
-				EFEE1415158B20F0006528BD /* parse-edid.c in Sources */,
+				EF428E0215A59F3B0048760C /* parse-edid.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +165,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -177,9 +181,9 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = "";
+				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
@@ -187,7 +191,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -197,30 +201,30 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				SDKROOT = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
 		EFE226E3158B015A007CA4FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "screenresolution/screenresolution-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = "";
+				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
 		EFE226E4158B015A007CA4FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "screenresolution/screenresolution-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = "";
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
