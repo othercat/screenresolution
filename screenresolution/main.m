@@ -1,5 +1,5 @@
 
-#define VERSION "1.9.1"
+#define VERSION "1.9.2"
 // vim: ts=4:sw=4
 /*
  * screenresolution sets the screen resolution on Mac computers.
