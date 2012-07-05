@@ -1,5 +1,5 @@
 
-#define VERSION "1.9.2"
+#define VERSION "1.9.3"
 // vim: ts=4:sw=4
 /*
  * screenresolution sets the screen resolution on Mac computers.
@@ -413,7 +413,7 @@ double CGDisplayGetRefreshRate(CGDisplayModeRef mode, CGDirectDisplayID displayI
         if (!isSilent)
             printf("LCD monitor should use EDID to get its refresh rate.\n");
         unsigned char i, EDID[128];
-        CFRange allrange = CFRangeMake(0, 128);// {0, 128};
+        CFRange allrange =  {0, 128};
         CFDictionaryRef displayDict = nil;
         CFDataRef EDIDValue = nil;
         
