@@ -1,5 +1,5 @@
 
-#define VERSION "1.9.3"
+#define VERSION "1.9.4"
 // vim: ts=4:sw=4
 /*
  * screenresolution sets the screen resolution on Mac computers.
@@ -415,20 +415,19 @@ double CGDisplayGetRefreshRate(CGDisplayModeRef mode, CGDirectDisplayID displayI
         unsigned char i, EDID[128];
         CFRange allrange =  {0, 128};
         CFDictionaryRef displayDict = nil;
-        CFDataRef EDIDValue = nil;
+        //CFDataRef EDIDValue = nil;
         
         // Now ask IOKit about the EDID reported in the display device (low level)
         io_connect_t displayPort = CGDisplayIOServicePort(displayID);
         if (displayPort) 
             displayDict = (CFDictionaryRef)IOCreateDisplayInfoDictionary(displayPort, 0);       
-        if (displayDict) 
-            EDIDValue = CFDictionaryGetValue(displayDict, CFSTR(kIODisplayEDIDKey));
+        //if (displayDict)
+        //    EDIDValue = CFDictionaryGetValue(displayDict, CFSTR(kIODisplayEDIDKey));
         
-        if (displayDict!= nil)
-            CFRelease(displayDict);
-        
-        if (EDIDValue) {	/* this will fail on i.e. televisions connected to powerbook s-video output */ 
-            CFDataGetBytes(EDIDValue, allrange, EDID);
+        //if (EDIDValue)
+        {	/* this will fail on i.e. televisions connected to powerbook s-video output */
+            CFDataGetBytes(CFDictionaryGetValue(displayDict, CFSTR(kIODisplayEDIDKey)),allrange, EDID);
+
             if (!isSilent) {
                 printf("IOKit reports the following EDID for your main display:\n\n");
                 for (i = 0; i < 128; i++){
@@ -444,8 +443,12 @@ double CGDisplayGetRefreshRate(CGDisplayModeRef mode, CGDirectDisplayID displayI
                 refreshHz = vfreq;
 
         }
-        else if (!isSilent) 
+        if (!isSilent) 
             printf("IOKit had a problem reading your main display EDID.\nAs long as CoreGraphics did not report 0.000000, this is OK.\n");
+        
+        
+        if (displayDict!= nil)
+            CFRelease(displayDict);
         
     }
     else {

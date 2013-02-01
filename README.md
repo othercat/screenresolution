@@ -92,5 +92,5 @@ twitter: [@othercatlee](twitter.com/#!/othercatlee)
 ## Licence
 
    screenresolution uses GPLv2 License. 
-   Copyright (c) 2012, Richard Li
+   Copyright (c) 2012-2013, Richard Li
    All rights reserved.
